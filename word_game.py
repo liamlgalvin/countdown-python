@@ -84,6 +84,7 @@ def letter_game(wordlist):
             elif num == "v":
                 add_vowel()
             else:
+                print("selection was neither c nor v. Here have a random letter")
                 add_random()
             print(letters[-1])
     elif int(selection) == 2:
