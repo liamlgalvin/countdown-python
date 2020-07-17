@@ -9,11 +9,17 @@ while True:
     print("2. Number Game")
     print("3. Exit")
     selection = input("pick 1, 2 or 3: ")
-    if int(selection) in range(1,3):
-        break
-    elif int(selection) == 3:
-        sys.exit()
+    try:
+        if int(selection) in range(1,3):
+            break
+        elif int(selection) == 3:
+            sys.exit()
+        else:
+            print("selection not in range")
+    except ValueError:
+        print("selection not a number")
 
+    
 if int(selection) == 1:
     wg.play_game()
 if int(selection) == 2:   

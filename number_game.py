@@ -100,10 +100,17 @@ def number_game():
         print("3. Solve")
         print("4. Exit")
         selection = input("pick 1, 2 or 3: ")
-        if int(selection) in range(1,4):
-            break
-        elif int(selection) == 4:
-            sys.exit()
+        try:
+            if int(selection) in range(1,4):
+                break
+            elif int(selection) == 4:
+                sys.exit()
+            else:
+                print("selection not in range")
+        except ValueError:
+            print("selection not a number")
+
+
 
     if int(selection) == 1:
         print("Choose your numbers:")
